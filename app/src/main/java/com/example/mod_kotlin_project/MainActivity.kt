@@ -1,3 +1,5 @@
+@file:Suppress("LocalVariableName")
+
 package com.example.mod_kotlin_project
 
 import android.content.Intent
@@ -9,6 +11,8 @@ import com.kakao.sdk.auth.LoginClient
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.AuthErrorCause.*
 import com.kakao.sdk.user.UserApiClient
+//import com.kakao.sdk.common.util.Utility
+//import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
