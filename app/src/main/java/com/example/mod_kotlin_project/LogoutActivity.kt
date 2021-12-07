@@ -19,10 +19,21 @@ class LogoutActivity : AppCompatActivity() {
 
         UserApiClient.instance.me { user, error ->
             nickname.text = "닉네임: ${user?.kakaoAccount?.profile?.nickname}"
-
         }
 
-        val kakao_logout_button = findViewById<Button>(R.id.kakao_logout_button) // 로그인 버튼
+        val gender = findViewById<TextView>(R.id.gender)
+
+        UserApiClient.instance.me { user, error ->
+            gender.text = "성별: ${user?.kakaoAccount?.gender}"
+        }
+
+        val age = findViewById<TextView>(R.id.age)
+
+        UserApiClient.instance.me { user, error ->
+            age.text = "나이: ${user?.kakaoAccount?.ageRange}"
+        }
+
+        val kakao_logout_button = findViewById<Button>(R.id.kakao_logout_button) // 로그아웃 버튼
 
         kakao_logout_button.setOnClickListener {
             UserApiClient.instance.logout { error ->
@@ -37,7 +48,7 @@ class LogoutActivity : AppCompatActivity() {
             }
         }
 
-        val kakao_unlink_button = findViewById<Button>(R.id.kakao_unlink_button) // 로그인 버튼
+        val kakao_unlink_button = findViewById<Button>(R.id.kakao_unlink_button) // 회원탈퇴 버튼
 
         kakao_unlink_button.setOnClickListener {
             UserApiClient.instance.unlink { error ->

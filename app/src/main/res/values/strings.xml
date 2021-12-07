@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mod_kotlin_project</string>
+    <string name="mykeepinlogin">TODO</string>
+    <string name="cloud1">TODO</string>
+    <string name="cloud2">TODO</string>
+    <string name="cloud3">TODO</string>
+    <string name="menu_account">계정</string>
 </resources>

@@ -3,6 +3,7 @@
 package com.example.mod_kotlin_project
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             }
             else if (tokenInfo != null) {
                 Toast.makeText(this, "토큰 정보 보기 성공", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LogoutActivity::class.java)
+                val intent = Intent(this, BarActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
                 finish()
             }
@@ -70,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             //로그인 성공 출
             else if (token != null) {
                 Toast.makeText(this, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, LogoutActivity::class.java)
+                val intent = Intent(this, BarActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
                 finish()
             }
@@ -89,6 +90,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val mykeepin_login_button = findViewById<ImageButton>(R.id.mykeepin_login_button)
+
+        mykeepin_login_button.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://testssp.mykeepin.com/"))
+            startActivity(intent)
+        }
 
     }
 }

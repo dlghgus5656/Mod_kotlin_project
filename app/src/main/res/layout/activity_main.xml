@@ -10,12 +10,14 @@
     tools:context=".MainActivity">
     <!--android:scaleType="center"-->
 
+    <!--카카오 로그인버튼 이미지 생성-->
+
     <ImageView
         android:id="@+id/modlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="188dp"
         android:contentDescription="TODO"
         android:src="@drawable/modlogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +29,7 @@
         android:id="@+id/kakao_login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginBottom="65dp"
         android:background="@android:color/transparent"
         android:minHeight="48dp"
@@ -39,43 +42,63 @@
         app:layout_constraintVertical_bias="0.954"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/cloud1"
-        android:layout_width="250dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="220dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+    <ImageButton
+        android:id="@+id/mykeepin_login_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/mykeepinlogin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cloud2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cloud1"
+        app:srcCompat="@drawable/mykeepin"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:id="@+id/cloud1"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="467dp"
+        app:layout_constraintBottom_toTopOf="@+id/mykeepin_login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cloud2"
+        android:contentDescription="@string/cloud1" />
+
+    <ImageView
+        android:id="@+id/cloud2"
+        android:layout_width="159dp"
+        android:layout_height="166dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="161dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/cloud3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modlogo"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/cloud2" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cloud2"
+        android:contentDescription="@string/cloud2" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/cloud3"
+        android:layout_width="224dp"
+        android:layout_height="208dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="113dp"
+        android:contentDescription="@string/cloud3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/cloud2"
         app:layout_constraintTop_toBottomOf="@+id/cloud1"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/cloud2" />
-
-    <!--카카오 로그인버튼 이미지 생성-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
