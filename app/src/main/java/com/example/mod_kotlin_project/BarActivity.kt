@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.ImageView
 
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -24,6 +25,12 @@ class BarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
+
+        val go_search = findViewById<ImageView>(R.id.main_search_button)
+        go_search.setOnClickListener {
+            val intent = Intent(this, SearchView::class.java)
+            startActivity(intent)
+        }
 
         val main_layout_toolbar: Toolbar = findViewById(R.id.main_layout_toolbar)
         setSupportActionBar(main_layout_toolbar) // 툴바를 액티비티의 앱바로 지정

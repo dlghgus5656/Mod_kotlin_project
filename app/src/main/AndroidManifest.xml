@@ -16,11 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mod_kotlin_project">
         <activity
+            android:name=".SearchView"
+            android:exported="false" />
+        <activity
             android:name=".TermsActivity"
             android:exported="false" />
         <activity android:name=".LogoutActivity" />
         <activity android:name=".BarActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

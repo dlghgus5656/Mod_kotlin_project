@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="250dp"
     android:padding="20dp"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/header_icon"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:src="@drawable/header_icon"/>
 
     <TextView
@@ -19,12 +19,12 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="#000000"
-        android:text="Bong Can Do"/>
+        android:text="Lee ho hyeon"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textColor="#EB554C4C"
-        android:text="tistory.bongcando.com"/>
+        android:text="test1234@gmail.com"/>
 </LinearLayout>

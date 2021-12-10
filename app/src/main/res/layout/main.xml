@@ -18,6 +18,7 @@
     <!--자식 레이아웃. Navigation Drawer-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/main_navigationView"
+        android:background="@color/sora"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="left"

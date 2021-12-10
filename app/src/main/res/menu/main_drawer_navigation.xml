@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id = "@+id/account"
-        android:icon = "@drawable/header_icon"
-        android:title = "@string/menu_account"
-        />
-    <item android:id = "@+id/did"
-        android:icon = "@drawable/header_icon"
-        android:title = "내 DID"
-        />
-    <item android:id = "@+id/reservation"
-        android:icon = "@drawable/header_icon"
-        android:title = "예약확인"
-        />
+    <group android:checkableBehavior="single">
+        <item android:id = "@+id/account"
+            android:icon = "@drawable/header_icon"
+            android:title = "@string/menu_account"
+            />
+        <item android:id = "@+id/did"
+            android:icon = "@drawable/header_icon"
+            android:title = "내 DID"
+            />
+        <item android:id = "@+id/reservation"
+            android:icon = "@drawable/header_icon"
+            android:title = "예약확인"
+            />
+    </group>
 
     <item android:id = "@+id/logout"
         android:icon = "@drawable/header_icon"
@@ -20,6 +22,7 @@
 
     <item android:id = "@+id/withdrawal"
         android:icon = "@drawable/header_icon"
+        android:layout_marginTop="136dp"
         android:title= "회원탈퇴"
         />
 
