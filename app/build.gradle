@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mod_kotlin_project"
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -27,6 +29,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -42,6 +53,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+    implementation 'com.google.zxing:core:3.4.1'
+    kapt "com.android.databinding:compiler:3.0.1"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0' // DrawerLayout
     implementation 'com.google.android.material:material:1.0.0' // NavigationView

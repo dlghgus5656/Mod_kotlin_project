@@ -1,10 +1,9 @@
 package com.example.mod_kotlin_project
 
-import android.content.ClipData
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.ImageView
 
 import androidx.appcompat.widget.Toolbar
@@ -57,12 +56,15 @@ class BarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        when(item.itemId){
-            R.id.account-> Toast.makeText(this,"account clicked",Toast.LENGTH_SHORT).show()
-            R.id.did-> Toast.makeText(this,"did clicked",Toast.LENGTH_SHORT).show()
-            R.id.reservation-> Toast.makeText(this,"예약확인 clicked",Toast.LENGTH_SHORT).show()
-            R.id.logout-> {
+        val godid = Intent(this, DIDpage::class.java)
+        when (item.itemId) {
+            R.id.account -> Toast.makeText(this, "account clicked", Toast.LENGTH_SHORT).show()
+            R.id.reservation -> Toast.makeText(this, "예약확인 clicked", Toast.LENGTH_SHORT).show()
+            R.id.did -> {
+                startActivity(godid)
+                Toast.makeText(this, "DID 인증을 해주세요", Toast.LENGTH_SHORT).show()
+            }
+            R.id.logout -> {
                 UserApiClient.instance.logout { error ->
                     if (error != null) {
                         Toast.makeText(this, "로그아웃 실패 $error", Toast.LENGTH_SHORT).show()
@@ -74,7 +76,7 @@ class BarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                     finish()
                 }
             }
-            R.id.withdrawal-> {
+            R.id.withdrawal -> {
                 UserApiClient.instance.unlink { error ->
                     if (error != null) {
                         Toast.makeText(this, "회원탈퇴 실패 $error", Toast.LENGTH_SHORT).show()
@@ -86,7 +88,7 @@ class BarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
                     finish()
                 }
             }
-        //R.id.logout-> Toast.makeText(this, "로그아웃", Toast.LENGTH_SHORT).show()
+            //R.id.logout-> Toast.makeText(this, "로그아웃", Toast.LENGTH_SHORT).show()
         }
         return false
     }

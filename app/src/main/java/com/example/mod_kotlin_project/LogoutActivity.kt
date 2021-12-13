@@ -39,7 +39,7 @@ class LogoutActivity : AppCompatActivity() {
             UserApiClient.instance.logout { error ->
                 if (error != null) {
                     Toast.makeText(this, "로그아웃 실패 $error", Toast.LENGTH_SHORT).show()
-                }else {
+                } else {
                     Toast.makeText(this, "로그아웃 성공", Toast.LENGTH_SHORT).show()
                 }
                 val intent = Intent(this, MainActivity::class.java)
@@ -54,7 +54,7 @@ class LogoutActivity : AppCompatActivity() {
             UserApiClient.instance.unlink { error ->
                 if (error != null) {
                     Toast.makeText(this, "회원 탈퇴 실패 $error", Toast.LENGTH_SHORT).show()
-                }else {
+                } else {
                     Toast.makeText(this, "회원 탈퇴 성공", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP))

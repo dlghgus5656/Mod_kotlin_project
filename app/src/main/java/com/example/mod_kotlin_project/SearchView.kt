@@ -1,19 +1,15 @@
 package com.example.mod_kotlin_project
 
-import android.content.Intent
-import android.graphics.Color
-import android.os.Build
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.MenuItem
-import androidx.annotation.RequiresApi
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import java.time.format.TextStyle
 
-class SearchView: AppCompatActivity() {
+
+class SearchView : AppCompatActivity() {
     //private var searchView: SearchView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +25,6 @@ class SearchView: AppCompatActivity() {
         //val editText = searchView.findViewById(androidx.appcompat.R.id.search_src_text)
         //editText.setTextColor(Color.WHITE)
 
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -42,4 +37,12 @@ class SearchView: AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        val imm: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
+        return true
+    }
+
 }

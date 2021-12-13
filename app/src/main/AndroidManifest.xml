@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mod_kotlin_project">
         <activity
+            android:name=".DIDpage"
+            android:exported="false" />
+        <activity
             android:name=".SearchView"
             android:exported="false" />
         <activity
