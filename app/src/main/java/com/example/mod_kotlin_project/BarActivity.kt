@@ -57,9 +57,14 @@ class BarActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelected
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val godid = Intent(this, DIDpage::class.java)
+        val goreservation = Intent(this, Reservation::class.java)
         when (item.itemId) {
             R.id.account -> Toast.makeText(this, "account clicked", Toast.LENGTH_SHORT).show()
-            R.id.reservation -> Toast.makeText(this, "예약확인 clicked", Toast.LENGTH_SHORT).show()
+
+            R.id.reservation -> {
+            startActivity(goreservation)
+            Toast.makeText(this, "예약확인 페이지입니다.", Toast.LENGTH_SHORT).show()
+        }
             R.id.did -> {
                 startActivity(godid)
                 Toast.makeText(this, "DID 인증을 해주세요", Toast.LENGTH_SHORT).show()

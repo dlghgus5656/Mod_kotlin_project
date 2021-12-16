@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8CDF6"
+    android:orientation="vertical"
+    tools:context=".Reservation">
+
+    <ImageButton
+        android:id="@+id/ic_back"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="35dp"
+        android:background="#B8CDF6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reservation_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/droneInfoImg"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="512dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservation_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="대여장소 "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoSize"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoImg"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoImg"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="서울특별시 용산구 000동 123-456"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoWeight"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoName"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="대여 드론 기종"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoFlyTime"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoSize"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoSize"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoFlyTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="DBC-1212"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoFlySpeed"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoWeight"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoWeight"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoFlySpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="드론 수: 1"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoPrice"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoFlyTime"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoFlyTime"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:text="대여 날짜"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoState"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoFlySpeed"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoFlySpeed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="2021.11.29"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoCamera"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoPrice"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoPrice"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/droneInfoCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="대여 시간"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/timee"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoState"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoState"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/timee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="110dp"
+        android:text="09:00~13:00"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/droneInfoCamera"
+        app:layout_constraintTop_toBottomOf="@+id/droneInfoCamera"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/reservation_title"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="247dp"
+        android:layout_marginBottom="54dp"
+        android:text="예약확인"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/droneInfoImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

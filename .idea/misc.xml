@@ -11,11 +11,13 @@
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.14635416666666667" />
         <entry key="app/src/main/res/drawable/menu_icon.xml" value="0.14322916666666666" />
         <entry key="app/src/main/res/drawable/qr_code.xml" value="0.15989583333333332" />
-        <entry key="app/src/main/res/layout/activity_didpage.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_didpage.xml" value="0.10223549619013869" />
         <entry key="app/src/main/res/layout/activity_logout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10237185429884225" />
+        <entry key="app/src/main/res/layout/activity_reservation.xml" value="0.2000672881694966" />
         <entry key="app/src/main/res/layout/activity_search_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_terms.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.14635416666666667" />
         <entry key="app/src/main/res/layout/main.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/main_drawer_header.xml" value="0.12708333333333333" />
         <entry key="app/src/main/res/layout/main_layout.xml" value="0.18614130434782608" />

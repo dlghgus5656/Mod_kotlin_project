@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.kakao.sdk.user.UserApiClient
 import android.widget.TextView
+import kotlinx.coroutines.delay
 
 @Suppress("UNUSED_ANONYMOUS_PARAMETER", "LocalVariableName", "SpellCheckingInspection")
 class LogoutActivity : AppCompatActivity() {
@@ -57,6 +58,7 @@ class LogoutActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "회원 탈퇴 성공", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
+
                     startActivity(intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP))
                     finish()
                 }

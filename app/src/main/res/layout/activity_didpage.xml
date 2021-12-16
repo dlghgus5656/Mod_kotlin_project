@@ -7,6 +7,20 @@
     android:background="@color/sora"
     tools:context=".DIDpage">
 
+    <!--<TextView
+        android:id="@+id/textv"
+        android:background="@color/white"
+        android:textAlignment="center"
+        android:text="d"
+        android:textSize="150sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>-->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
