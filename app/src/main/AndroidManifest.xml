@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mod_kotlin_project">
         <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Reservation"
             android:exported="false" />
         <activity
@@ -30,11 +39,11 @@
         <activity android:name=".LogoutActivity" />
         <activity android:name=".BarActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
