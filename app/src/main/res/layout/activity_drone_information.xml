@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8CDF6"
+    android:orientation="vertical"
+    tools:context=".DroneInformation">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:background="#B8CDF6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/droneInfoImg"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/droneInfoName"
+        android:text="제픔명 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoSize"
+        android:text="제픔크기 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoWeight"
+        android:text="제픔무게 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoFlyTime"
+        android:text="비행시간 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoFlySpeed"
+        android:text="비행시간 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoPrice"
+        android:text="가격 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoState"
+        android:text="드론 상태 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/droneInfoCamera"
+        android:text="카메라 유무 : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"/>
+
+    <ImageButton
+        android:id="@+id/droneSelectBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="#B8CDF6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/droneselect" />
+
+
+
+</LinearLayout>

@@ -6,11 +6,13 @@
     <uses-sdk tools:overrideLibrary="com.kakao.sdk:v2-user:2.0.1" />
     <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_main_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -34,9 +36,20 @@
             android:name=".SearchView"
             android:exported="false" />
         <activity
-            android:name=".TermsActivity"
+            android:name=".Payment"
             android:exported="false" />
-        <activity android:name=".LogoutActivity" />
+        <activity
+            android:name=".RentalPeriod"
+            android:exported="false" />
+        <activity
+            android:name=".DroneInformation"
+            android:exported="false" />
+        <activity
+            android:name=".DroneList"
+            android:exported="false" />
+        <activity
+            android:name=".ShopInfo"
+            android:exported="false" />
         <activity android:name=".BarActivity" />
         <activity android:name=".MainActivity">
             <!--<intent-filter>
@@ -57,6 +70,9 @@
                     android:scheme="kakao26260caf5ab277297c52486e44878aa0" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="ia9603oo7d" />
     </application>
 
 </manifest>

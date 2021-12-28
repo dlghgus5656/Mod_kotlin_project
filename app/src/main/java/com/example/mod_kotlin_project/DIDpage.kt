@@ -6,23 +6,15 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.widget.Toolbar
-import androidx.core.os.HandlerCompat.postDelayed
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.google.zxing.qrcode.QRCodeWriter
-import kotlinx.android.synthetic.main.activity_didpage.*
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withTimeout
-import kotlinx.coroutines.delay
-import kotlin.math.roundToInt
 
 class DIDpage : AppCompatActivity() {
 
@@ -72,10 +64,10 @@ class DIDpage : AppCompatActivity() {
                         e.printStackTrace()
                     }
 
-                    fun main(args:Array<String>) {
+                    /*fun main(args:Array<String>) {
                         for(i in 10 downTo 1)    //output : 10, 9, 8, 7 ... 1
                             print("test: $i")
-                    }
+                    }*/
 
                     Handler().postDelayed({
                         startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))

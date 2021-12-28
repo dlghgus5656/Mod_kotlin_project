@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+/*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.annotation.UiThread
@@ -11,7 +12,7 @@ import android.view.animation.Animation.AnimationListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_reservation.*
 import kotlinx.android.synthetic.main.activity_splash.*
-
+*/
 class SplashScreenActivity : AppCompatActivity() {
     // After 3000 mileSeconds / 3 seconds your next activity will display.
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,6 @@ class SplashScreenActivity : AppCompatActivity() {
     }
     private fun loadSplashScreen(){
         Handler().postDelayed({
-            // You can declare your desire activity here to open after finishing splash screen. Like MainActivity
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()

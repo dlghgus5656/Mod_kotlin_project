@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="sora">#B8CDF6</color>
     <color name="windowBackground">#FFFFFFFF</color>
+    <color name="background">#B8CDF6</color>
+    <color name="navy">#3D498D</color>
 </resources>

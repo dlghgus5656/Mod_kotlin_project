@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         layout="@layout/main_layout" />
 
+
     <!--자식 레이아웃. Navigation Drawer-->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/main_navigationView"
